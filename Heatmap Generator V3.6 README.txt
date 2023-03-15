@@ -1,0 +1,45 @@
+Heatmap Generator V3.6 README
+
+Description
+This Python script generates an interactive heatmap visualization of geospatial data. The heatmap can display data in either Lat/Long or MGRS (Military Grid Reference System) coordinate formats. The output file is an HTML file saved on the user's Desktop. An important aspect of this update is that positional data can be combined with dates so you can "build out" your heatmap over time. 
+
+Dependencies
+Python 3.x
+pandas
+datetime
+folium
+folium.plugins
+tkinter
+To install the dependencies, run the following command:
+
+
+pip install pandas folium mgrs tk
+
+Usage
+Run the script in your preferred Python environment:
+
+python heatmap_generator.py
+
+A window will open asking you to choose the coordinate format (Lat/Long or MGRS). Select the appropriate format for your data.
+
+After selecting the coordinate format, a file dialog will appear. Select the CSV file containing your geospatial data.
+
+The script will process the data and generate an interactive heatmap visualization. The heatmap will be saved as an HTML file on your Desktop.
+
+Input Data Format
+The input data should be a CSV file with the following columns:
+
+Lat/Long format:
+
+lat: Latitude
+lon: Longitude
+date: Date in %d-%b-%y format (e.g., 15-Mar-22)
+MGRS format:
+
+MGRS: MGRS coordinates
+date: Date in %d-%b-%y format (e.g., 15-Mar-22)
+Output
+The output is an HTML file named Heatmap_YYYY_MM_DD_HH_mm_ss.html (e.g., Heatmap_2023_03_15_12_30_00.html), where YYYY_MM_DD_HH_mm_ss is the timestamp when the heatmap was generated. The file will be saved on the user's Desktop.
+
+License
+Anyone can use this script just as long as you're using it for good, or at least to do bad to worse people. 
